@@ -19,14 +19,11 @@ let addRootContentTypesXML = (promiseObj) => {
         let contentTypesAdded = [];
         promiseObj.wb.sheets.forEach((s, i) => {
             if (s.drawingCollection.length > 0) { 
-                let extensionsAdded = [];
                 s.drawingCollection.drawings.forEach((d) => {
-                    if (extensionsAdded.indexOf(d.extension) < 0) {
-                        let typeRef = d.contentType + '.' + d.extension;
-                        if (contentTypesAdded.indexOf(typeRef) < 0) {
-                            xml.ele('Default').att('ContentType', d.contentType).att('Extension', d.extension);
-                        }
-                        extensionsAdded.push(d.extension);
+                    let typeRef = d.contentType + '.' + d.extension;
+                    if (contentTypesAdded.indexOf(typeRef) < 0) {
+                        xml.ele('Default').att('ContentType', d.contentType).att('Extension', d.extension);
+                        contentTypesAdded.push(typeRef);
                     }
                 });
             }
