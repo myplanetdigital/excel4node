@@ -63,6 +63,7 @@ var optsTypes = {
         'tabSelected': null,
         'workbookViewId': null,
         'rightToLeft': null,
+        'showGridLines': null,
         'zoomScale': null,
         'zoomScaleNormal': null,
         'zoomScalePageLayoutView': null

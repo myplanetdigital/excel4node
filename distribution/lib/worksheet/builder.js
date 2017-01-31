@@ -58,7 +58,7 @@ var _addSheetViews = function _addSheetViews(promiseObj) {
         var o = promiseObj.ws.opts.sheetView;
         var ele = promiseObj.xml.ele('sheetViews');
         var tabSelected = promiseObj.ws.opts;
-        var sv = ele.ele('sheetView').att('tabSelected', o.tabSelected).att('workbookViewId', o.workbookViewId).att('rightToLeft', o.rightToLeft).att('zoomScale', o.zoomScale).att('zoomScaleNormal', o.zoomScaleNormal).att('zoomScalePageLayoutView', o.zoomScalePageLayoutView);
+        var sv = ele.ele('sheetView').att('showGridLines', o.showGridLines).att('tabSelected', o.tabSelected).att('workbookViewId', o.workbookViewId).att('rightToLeft', o.rightToLeft).att('zoomScale', o.zoomScale).att('zoomScaleNormal', o.zoomScaleNormal).att('zoomScalePageLayoutView', o.zoomScalePageLayoutView);
 
         var modifiedPaneParams = [];
         Object.keys(o.pane).forEach(function (k) {
